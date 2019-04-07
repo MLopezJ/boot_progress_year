@@ -35,6 +35,14 @@ Then, we're going to test our credentials by getting basic information of a Twit
 
 In getting_started_twitter.py you can see the script and in congif.py you need to put you own credentials provide by Twitter.
 
+### Step 2: Hello Twitter 
+
+On hello_twitter.py we are going to make our bot's first tweet. For that we are going to use the "update_status ('')" method from tweepy. This method allows us to create a new tweet with the information provyde by in parameters.
+
+You can check the tweet in the twitter profile of the app's owner 
+
+
+
 ## Librarys used
 
 + Tweepy
