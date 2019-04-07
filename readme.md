@@ -41,6 +41,21 @@ On hello_twitter.py we are going to make our bot's first tweet. For that we are 
 
 You can check the tweet in the twitter profile of the app's owner 
 
+### Step 3: Our application bot 
+
+At this point, we already know how to create a twitter bot and make a simple post in our twitter profile with the bot. Now, we are going to add the logic require to know the year's progress in percentage and then, make a post with a progress bar representing the percentage elapsed. Our script will check the progress day by day. So, we can divide all this in four steps:
+
+* Get the percentage of the year's progress 
+    > year_progress.py
+
+* Draw a progress bar 
+    > draw.py
+
+* Make a post on Twitter 
+    > twitter_post.py
+
+* Check if the bot need to make a new post 
+    > index.py
 
 
 ## Librarys used
