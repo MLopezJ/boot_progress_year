@@ -13,15 +13,32 @@ For develop this project, I have followed some previous steps, which I different
 
 ### Step 1: Create Twitter bot and checking credentials
 
-To create a bot on Twitter, we need to "ask" first to Twitter if they can give to us permisions. (It's a simple way to see it)
+To create our bot we need to make some things first before program it:
+ * Create the bot's twitter account 
+ * Register as developer
+ * Check credentials
 
-The way we "ask" for that authorization it's by goint to the web page for Twitter developers and sign up as developers. 
+ #### Create the bot's twitter account
+ We need a profile where the bot will post the tweets, so we're going to register an account. Go to 
+ > https://twitter.com/ 
+ 
+ and signup as usual.  
+
+Then, we are going to register that new twitter account as Developer. 
+
+ #### Register as developer
+
+The developer mode will let us interact with Twitter in a special way, for example, giving the possibility of create apps with the Twitter enviroment. An app will give to us the credetials for creates bots, checks data, and so on. 
+
+So, we're going to sign up in the next link. 
 > https://developer.twitter.com/en.html
 
-Next we need to press the "create an app" button in the following URL:
+Next we need to create an app, for that, we need to press the "create an app" button in the following URL:
 > https://developer.twitter.com/en/apps
 
-The system will ask us for some questions that you have to response. Then, click on "create" and then, we already have the permisions for create our twitter bot. (It will be found on "Keys and Tokens" section)
+Then, the system will ask us for some questions that you have to response. Then, click on "create" and then, we already have the permisions for create our twitter bot. (It will be found on "Keys and Tokens" section)
+
+#### Check credentials
 
 For interact with our Twitter app from Python we are going to use a library that will help in that. It's called Tweepy. You can install typing the next command: 
 
@@ -43,18 +60,24 @@ You can check the tweet in the twitter profile of the app's owner
 
 ### Step 3: Our application bot 
 
-At this point, we already know how to create a twitter bot and make a simple post in our twitter profile with the bot. Now, we are going to add the logic require to know the year's progress in percentage and then, make a post with a progress bar representing the percentage elapsed. Our script will check the progress day by day. So, we can divide all this in four steps:
+At this point, we already know how to create a twitter app and make a simple post in our twitter profile with the bot. Now, we are going to add the logic require to know the year's progress in percentage and then, make a post with a progress bar representing the percentage elapsed. Our script will check the progress day by day. So, we can divide all this in the next steps:
 
-* Get the percentage of the year's progress 
+* request for the percentage of the year's progress 
+    > index.py
+
+* Get the percentage of the year's progress
+
     > year_progress.py
 
-* Draw a progress bar 
-    > draw.py
+  If the year has advanced by 1%
 
-* Make a post on Twitter 
-    > twitter_post.py
+    * Draw a progress bar 
+        > draw.py
 
-* Check if the bot need to make a new post 
+    * Make a post on Twitter 
+        > twitter_post.py
+
+* Wait for a day. Repeat. 
     > index.py
 
 
@@ -62,6 +85,12 @@ At this point, we already know how to create a twitter bot and make a simple pos
 
 + Tweepy
     + Let us to manipulate the Twitter APi from Python 
++ Time
+    + Its a library for handle time-related tasks. In this case is using for suspends (delays) the execution of the current thread for the given number of seconds
++ Calendar
+    + This module allows you to use useful functions related to the calendar. In this specific use case, it is using for get the number of days of a specific month and year
++ Datetime
+    + This module supplies classes for manipulating dates and times. Is using for get the current date time  
 
 ## Environment
 
