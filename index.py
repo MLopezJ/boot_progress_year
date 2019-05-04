@@ -9,20 +9,21 @@ def process(percent):
 
     progressVar += ' '+ str(percent)+ '%'
 
-    print(progressVar)
+    #print(progressVar)
 
     twitter_post.makePost(progressVar)
 
 progress = 0
 oneDay = 24*60*60 # hours * minutes * seconds 
+sixHours = 6*60*60
 
 while True:
 
-    actualPercent = year_progress.getYearsProgressPercent()
+    actualPercent = int(year_progress.getYearsProgressPercent())
 
-    if (progress < int(actualPercent)):
-        progress = int(actualPercent)
+    if (progress < actualPercent):
+        progress = actualPercent
         process(progress)
 
-    time.sleep(7) #oneDay
+    time.sleep(sixHours)
 
